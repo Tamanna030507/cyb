@@ -1,0 +1,8 @@
+{
+  "simulation_tag": "SIMULATION",
+  "sim_events_count": 14,
+  "score_before_retrain": 0.4338,
+  "score_after_poisoned_retrain": 0.5884,
+  "regression_detected": false,
+  "policy": "SIMULATION events are scored for regression only and never enter training labels"
+}

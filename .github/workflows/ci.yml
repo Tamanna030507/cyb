@@ -1,0 +1,40 @@
+name: ci
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+      - name: Audit
+        run: pip-audit || true
+      - name: Tests
+        env:
+          PYTHONPATH: src
+        run: pytest -q tests/
+      - name: Eval smoke
+        env:
+          PYTHONPATH: src
+        run: |
+          python -c "
+          from data.generator import EventGenerator
+          from eval.evaluate import run_full_evaluation
+          from pathlib import Path
+          EventGenerator(1).generate_dataset(n_benign_hosts=12, n_attack_hosts=4, out_dir='../data/synthetic')
+          r = run_full_evaluation(Path('../data/synthetic/events.jsonl'), Path('../models/detector.joblib'), Path('../experiments/eval_results.json'))
+          assert r['temporal_leakage_check']['ok'] is True
+          print('leakage ok')
+          "

@@ -1,0 +1,54 @@
+{
+  "standard_attacks": {
+    "n": 13,
+    "recall": 0.9230769230769231,
+    "mean_score": 0.870610366997312,
+    "scores": [
+      0.872,
+      0.923,
+      0.795,
+      0.929,
+      0.927,
+      0.946,
+      0.899,
+      0.923,
+      0.983,
+      0.988,
+      0.94,
+      0.921,
+      0.27
+    ]
+  },
+  "evasive_attacks": {
+    "n": 11,
+    "recall": 1.0,
+    "mean_score": 0.9217308415540068,
+    "scores": [
+      0.897,
+      0.874,
+      0.852,
+      0.989,
+      0.971,
+      0.989,
+      0.91,
+      0.891,
+      0.897,
+      0.881,
+      0.988
+    ]
+  },
+  "recall_drop": -0.0769,
+  "feature_ablation_impact": {
+    "network_exfil_bytes": -0.0319,
+    "unique_dirs": -0.0155,
+    "proc_rate_5m": -0.0084,
+    "file_write_rate_5m": 0.001,
+    "file_rename_rate_5m": 0.0,
+    "file_delete_rate_5m": 0.0,
+    "encrypt_ext_hits": 0.0,
+    "entropy_spike_count": 0.0,
+    "shadow_delete_hits": 0.0,
+    "lsass_hits": 0.0
+  },
+  "summary": "Standard recall 0.92, evasive recall 1.00, drop -0.08"
+}

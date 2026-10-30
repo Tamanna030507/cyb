@@ -1,0 +1,95 @@
+{
+  "n_cases": 5,
+  "spl_validity_accuracy": 1.0,
+  "grounding_rate": 0.6,
+  "gating_coverage": 1.0,
+  "details": [
+    {
+      "id": "c1",
+      "spl_valid": true,
+      "spl_expected": true,
+      "spl_match": true,
+      "grounded": true,
+      "gate": {
+        "approved": [
+          "block_extension"
+        ],
+        "needs_human_approval": [
+          {
+            "action": "isolate_host",
+            "reason": "destructive requires human approval"
+          }
+        ],
+        "rejected": []
+      }
+    },
+    {
+      "id": "c2",
+      "spl_valid": false,
+      "spl_expected": false,
+      "spl_match": true,
+      "grounded": false,
+      "gate": {
+        "approved": [],
+        "needs_human_approval": [],
+        "rejected": [
+          {
+            "action": "format_disk",
+            "reason": "not in allowlist"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c3",
+      "spl_valid": true,
+      "spl_expected": true,
+      "spl_match": true,
+      "grounded": true,
+      "gate": {
+        "approved": [
+          "notify_analyst",
+          "quarantine_file"
+        ],
+        "needs_human_approval": [],
+        "rejected": []
+      }
+    },
+    {
+      "id": "c4",
+      "spl_valid": false,
+      "spl_expected": false,
+      "spl_match": true,
+      "grounded": false,
+      "gate": {
+        "approved": [],
+        "needs_human_approval": [
+          {
+            "action": "kill_process",
+            "reason": "destructive requires human approval"
+          },
+          {
+            "action": "disable_account",
+            "reason": "destructive requires human approval"
+          }
+        ],
+        "rejected": []
+      }
+    },
+    {
+      "id": "c5",
+      "spl_valid": true,
+      "spl_expected": true,
+      "spl_match": true,
+      "grounded": true,
+      "gate": {
+        "approved": [
+          "snapshot_host"
+        ],
+        "needs_human_approval": [],
+        "rejected": []
+      }
+    }
+  ],
+  "note": "Synthetic benchmark of validation/gating/grounding logic. Not a live LLM call benchmark."
+}

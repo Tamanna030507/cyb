@@ -1,0 +1,30 @@
+{
+  "description": "Simulated feedback-loop poisoning: true-positive labels flipped to false-positive at given rates, then model retrained.",
+  "results": [
+    {
+      "poison_rate": 0.0,
+      "n_poisoned_labels": 0,
+      "test_recall": 0.8333,
+      "mean_score_on_attacks": 0.821
+    },
+    {
+      "poison_rate": 0.1,
+      "n_poisoned_labels": 1,
+      "test_recall": 0.8333,
+      "mean_score_on_attacks": 0.7866
+    },
+    {
+      "poison_rate": 0.25,
+      "n_poisoned_labels": 4,
+      "test_recall": 0.3333,
+      "mean_score_on_attacks": 0.4926
+    },
+    {
+      "poison_rate": 0.5,
+      "n_poisoned_labels": 9,
+      "test_recall": 0.3333,
+      "mean_score_on_attacks": 0.4329
+    }
+  ],
+  "takeaway": "Higher poison rates degrade recall. Provenance-tracked feedback is required before closed-loop retraining."
+}

@@ -1,0 +1,33 @@
+{
+  "pr_auc": 1.0,
+  "roc_auc": 1.0,
+  "precision": 1.0,
+  "recall": 0.8333333333333334,
+  "f1": 0.9090909090909091,
+  "fpr_at_90_recall": 0.99999999995,
+  "confusion_matrix": [
+    [
+      20,
+      0
+    ],
+    [
+      1,
+      5
+    ]
+  ],
+  "rules_only_recall": 1.0,
+  "sigma_baseline_recall": 1.0,
+  "threshold": 0.45,
+  "n_samples": 26,
+  "n_positive": 6,
+  "train_seconds": 0.775,
+  "inference_latency_ms": 1.3,
+  "mttd_seconds": 0.0,
+  "temporal_leakage_check": {
+    "ok": true,
+    "max_train_ts": 1749402674.78467,
+    "min_test_ts": 1749543793.203462,
+    "leaked": false
+  },
+  "alert_volume_per_1000": 192.3
+}

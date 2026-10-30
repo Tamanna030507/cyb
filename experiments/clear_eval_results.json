@@ -1,0 +1,35 @@
+{
+  "data": "experiments/clear_mini/clear_mini.csv",
+  "schema": "CLEAR command-level mini sample",
+  "known_variants": {
+    "pr_auc": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "n_test": 80,
+    "n_pos": 40
+  },
+  "unknown_variants": {
+    "pr_auc": 0.999390243902439,
+    "precision": 1.0,
+    "recall": 0.025,
+    "f1": 0.04878048780487805,
+    "n_test": 80,
+    "n_pos": 40
+  },
+  "poisoning_on_clear_schema": [
+    {
+      "poison_rate": 0.0,
+      "recall": 1.0
+    },
+    {
+      "poison_rate": 0.25,
+      "recall": 0.75
+    },
+    {
+      "poison_rate": 0.5,
+      "recall": 0.5
+    }
+  ],
+  "disclaimer": "Mini CLEAR-schema sample for pipeline credibility. Full CLEAR is on Kaggle; re-run loader on real subset for production claims."
+}

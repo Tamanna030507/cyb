@@ -1,0 +1,13 @@
+{
+  "inspired_by": "Cisco Encrypted Visibility Engine (metadata-only classification)",
+  "features": "packet size sequence, inter-arrival gaps, direction ratio, TLS fingerprint bucket",
+  "weighted_naive_bayes": {
+    "accuracy": 1.0,
+    "auc": 1.0
+  },
+  "logistic_regression": {
+    "accuracy": 1.0,
+    "auc": 1.0
+  },
+  "note": "Toy prototype on simulated encrypted-flow metadata. Not production EVE."
+}

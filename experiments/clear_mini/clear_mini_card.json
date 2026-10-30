@@ -1,0 +1,24 @@
+{
+  "source": "CLEAR-schema hard mini sample",
+  "design": "Unknown variants are low-and-slow, low-WAR, normal extensions, mixed with benign-like I/O so recall is non-trivial",
+  "n_rows": 9800,
+  "known_families": [
+    "LockBit",
+    "Conti",
+    "Hive",
+    "BlackCat",
+    "Ryuk",
+    "Maze",
+    "REvil",
+    "WannaCry"
+  ],
+  "unknown_families": [
+    "Play",
+    "Royal",
+    "BlackBasta",
+    "Clop",
+    "Akira"
+  ],
+  "kaggle_full": "https://www.kaggle.com/datasets/johndoenvme/clear-command-level-annotated-ransomware",
+  "paper": "CLEAR: Command Level Annotated Dataset for Ransomware Detection (NeurIPS 2025)"
+}

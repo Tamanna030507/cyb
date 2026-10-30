@@ -1,0 +1,12 @@
+{
+  "n_events": 4678,
+  "n_benign_hosts": 80,
+  "n_attack_hosts": 24,
+  "evasive_ratio": 0.4,
+  "train_window": "2025-06-01 to 2025-06-09",
+  "test_window": "2025-06-10 onwards",
+  "generated_at": "2026-10-28T19:06:49.576066Z",
+  "label_logic": "Deterministic from generator stage. Attack sequences labeled 1, benign sessions labeled 0.",
+  "imbalance_note": "Controlled synthetic ratio. Real environments are far more imbalanced.",
+  "temporal_design": "Train hosts only in early window, test hosts only in later window. No timestamp overlap by construction."
+}
