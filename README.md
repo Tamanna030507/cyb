@@ -39,7 +39,7 @@ Most student "cyber ML" repos are just a classifier trained on a public CSV. Thi
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. One command: data + train + eval + experiments
