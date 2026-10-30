@@ -18,7 +18,7 @@ Most student "cyber ML" repos are just a classifier trained on a public CSV. Thi
 
 ---
 
-## 📊 Results (v1.0 Evaluation)
+##  Results (v1.0 Evaluation)
 
 *Note: Until a real-world CLEAR dataset subset is evaluated, the ML metrics below are run on a schema-faithful synthetic sample. The perfect scores on the synthetic sample indicate it is highly separable; the true credibility signals here are the leakage checks, poisoning degradation and LLM gating.*
 
